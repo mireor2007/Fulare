@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulare | Catálogo de Belleza</title>
+    <link rel="shortcut icon" href="/html/Sin título-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="slider">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+        </div>
+        
+        <div class="header-content">
+            <h1 class="logo">Fulare</h1>
+            <p class="slogan">Belleza y cuidado personal</p>
+            <nav>
+                <ul>
+                    <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#catalogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+                    <li><a href="#carrito"><i class="fas fa-shopping-cart"></i> Carrito (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="#comentarios"><i class="fas fa-comments"></i> Comentarios</a></li>
+                    <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de catálogo -->
+    <main id="catalogo">
+        <section class="categories">
+            <h2>Nuestros Productos</h2>
+            <div class="category-buttons">
+                <button class="active" data-category="all">Todos</button>
+                <button data-category="maquillaje">Maquillaje</button>
+                <button data-category="perfumes">Perfumes</button>
+                <button data-category="higiene">Higiene</button>
+            </div>
+            
+            <div class="products-container">
+                <!-- Productos se cargarán dinámicamente con JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Sección de carrito (oculta inicialmente) -->
+    <section id="carrito" class="cart-section hidden">
+        <div class="cart-container">
+            <h2><i class="fas fa-shopping-cart"></i> Tu Carrito</h2>
+            <div class="cart-items">
+                <!-- Ítems del carrito se cargarán aquí -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="total-price">$0</span></p>
+                <button id="checkout-btn">Finalizar Compra</button>
+                <button id="close-cart">Seguir Comprando</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de comentarios -->
+    <section id="comentarios" class="comments-section">
+        <h2>Comentarios de Clientes</h2>
+        <div class="comments-container">
+            <div class="comment-form">
+                <h3>Deja tu comentario</h3>
+                <form id="comment-form">
+                    <input type="text" id="comment-name" placeholder="Tu nombre" required>
+                    <textarea id="comment-text" placeholder="Tu experiencia con nuestros productos..." required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="comments-list">
+                <!-- Comentarios se cargarán aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +52 272 297 5543</p>
+                <p><i class="fas fa-envelope"></i> info@fulare.com</p>
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <p class="copyright">© 2024 Fulare. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
